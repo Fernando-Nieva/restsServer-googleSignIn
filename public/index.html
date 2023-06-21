@@ -37,9 +37,10 @@
      
             //Google Token: ID_TOKEN
             // console.log('id_token',response.credential);
+            const url=`${window.location.origin}/api/auth/google`;
             const body = {id_token:response.credential};
 
-            fetch('http://localhost:8080/api/auth/google',{
+            fetch(url,{
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json'
